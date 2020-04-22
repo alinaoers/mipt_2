@@ -13,8 +13,10 @@
 
 class ArmyFactory {
     int size_catap_ = 50;
-    int size_cross = 150;
+    int size_cross_ = 150;
 public:
+    int StartSizeCatap() const;
+    int StartSizeCross() const;
     CatapultMan* createCatapultMan();
     Crossbower* createCrossbower();
     ~ArmyFactory();

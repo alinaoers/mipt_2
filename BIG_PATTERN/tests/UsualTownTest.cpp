@@ -71,7 +71,7 @@ TEST(CreateUsualTown, BaseCatapult) {
     ArmyFactory af;
 
     world.my_town = world.CreateTown(utf, umb, af);
-    ASSERT_EQ(world.my_town->army->v_catap_.size(), 50);
+    ASSERT_EQ(world.my_town->army->GetCatap()->size(), 50);
 }
 
 TEST(CreateUsualTown, BaseCrossbower) {
@@ -81,5 +81,5 @@ TEST(CreateUsualTown, BaseCrossbower) {
     ArmyFactory af;
     
     world.my_town = world.CreateTown(utf, umb, af);
-    ASSERT_EQ(world.my_town->army->v_cross_.size(), 150);
+    ASSERT_EQ(world.my_town->army->GetCross()->size(), 150);
 }

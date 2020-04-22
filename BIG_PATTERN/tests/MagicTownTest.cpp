@@ -71,7 +71,7 @@ TEST(CreateMagicTown, BaseCatapult) {
     ArmyFactory af;
     
     world.my_town = world.CreateTown(mtf, mmb, af);
-    ASSERT_EQ(world.my_town->army->v_catap_.size(), 50);
+    ASSERT_EQ(world.my_town->army->GetCatap()->size(), 50);
 }
 
 TEST(CreateMagicTown, BaseCrossbower) {
@@ -81,7 +81,7 @@ TEST(CreateMagicTown, BaseCrossbower) {
     ArmyFactory af;
     
     world.my_town = world.CreateTown(mtf, mmb, af);
-    ASSERT_EQ(world.my_town->army->v_cross_.size(), 150);
+    ASSERT_EQ(world.my_town->army->GetCross()->size(), 150);
 }
 
 

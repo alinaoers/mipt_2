@@ -13,11 +13,14 @@
 #include "Warriors.hpp"
 
 class Army {
-public:
-    int size_catap_ = 50;
-    int size_cross_ = 150;
     std::vector<CatapultMan*> v_catap_;
     std::vector<Crossbower*> v_cross_;
+public:
+    int GetSizeCross() const;
+    int GetSizeCatap() const;
+    
+    std::vector<CatapultMan*>* GetCatap();
+    std::vector<Crossbower*>* GetCross();
     ~Army();
 };
 

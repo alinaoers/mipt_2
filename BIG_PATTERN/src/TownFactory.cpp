@@ -10,11 +10,11 @@
 
 Army* TownFactory::createArmy(ArmyFactory& factory) {
     Army* p = new Army;
-    for (size_t i = 0; i < p->size_cross_; ++i) {
-        p->v_cross_.push_back(factory.createCrossbower());
+    for (size_t i = 0; i < factory.StartSizeCross(); ++i) {
+        p->GetCross()->push_back(factory.createCrossbower());
     }
-    for (size_t i = 0; i < p->size_catap_; ++i) {
-        p->v_catap_.push_back(factory.createCatapultMan());
+    for (size_t i = 0; i < factory.StartSizeCatap(); ++i) {
+        p->GetCatap()->push_back(factory.createCatapultMan());
     }
     return p;
 }

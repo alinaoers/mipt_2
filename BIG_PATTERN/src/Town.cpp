@@ -9,14 +9,13 @@
 #include "Town.hpp"
 
 void Town::GetInfo() {
-    if (army->v_catap_.size() != 0) {
-        std::cout << army->v_catap_.size() << " - catapult\n";
+    if (army->GetCatap()->size() != 0) {
+        std::cout << army->GetCatap()->size() << " - catapult\n";
     }
     
-    if (army->v_cross_.size() != 0) {
-        std::cout << army->v_cross_.size() << " - crossbower\n\n";
+    if (army->GetCross()->size() != 0) {
+        std::cout << army->GetCross()->size() << " - crossbower\n\n";
     }
-    
     
     if (map->v_ch_.size() != 0) {
         std::cout << map->v_ch_.size() << " - civiliam home\n";
